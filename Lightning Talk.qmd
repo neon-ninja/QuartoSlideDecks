@@ -14,7 +14,7 @@ format:
   revealjs:
     # tbl-cap-location: bottom
     # number-sections: true
-    theme: robot-lung2 2.scss
+    theme: UoAtemplate.scss
     # css: ./logo.css
     # disableLayout: true
     navigation-mode: vertical
