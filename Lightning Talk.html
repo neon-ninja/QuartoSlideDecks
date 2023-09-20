@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="Lightning Talk_files/libs/clipboard/clipboard.min.js"></script>
-<script src="Lightning Talk_files/libs/quarto-html/tabby.min.js"></script>
-<script src="Lightning Talk_files/libs/quarto-html/popper.min.js"></script>
-<script src="Lightning Talk_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="Lightning Talk_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Lightning Talk_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="Lightning Talk_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="Lightning Talk_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="Lightning Talk_files/libs/quarto-contrib/reveal-header-1.0.0/add_header.js" defer="true"></script>
-<link href="Lightning Talk_files/libs/quarto-contrib/reveal-header-1.0.0/add_header.css" rel="stylesheet">
-<link href="Lightning Talk_files/libs/quarto-contrib/grid-htext-1.0.0/grid_htext.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.340">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/quarto-contrib/reveal-header-1.0.0/add_header.js" defer="true"></script>
+<link href="site_libs/quarto-contrib/reveal-header-1.0.0/add_header.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/grid-htext-1.0.0/grid_htext.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Dr.&nbsp;Jens Brinkmann">
-  <title>ML Carp Recap and Outlook</title>
+  <title>Developing a Carpentries-style Machine Learning workshop</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="Lightning Talk_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="Lightning Talk_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -33,11 +33,11 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="Lightning Talk_files/libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link href="Lightning Talk_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="Lightning Talk_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="Lightning Talk_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="Lightning Talk_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -322,14 +322,33 @@
       margin-right: 0; 
     }
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+  <script type="text/javascript">
+  window.PlotlyConfig = {MathJaxConfig: 'local'};
+  if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+  if (typeof require !== 'undefined') {
+  require.undef("plotly");
+  requirejs.config({
+      paths: {
+          'plotly': ['https://cdn.plot.ly/plotly-2.20.0.min']
+      }
+  });
+  require(['plotly'], function(Plotly) {
+      window._Plotly = Plotly;
+  });
+  }
+  </script>
+
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" data-background-image="UoALogoDarkBlueRGBLandscape.png" data-background-position="95% 76%" data-background-size="20%" class="quarto-title-block center">
-  <h1 class="title">ML Carp Recap and Outlook</h1>
-  <p class="subtitle">What’s next?</p>
+  <h1 class="title">Developing a Carpentries-style Machine Learning workshop</h1>
+  <p class="subtitle">Lighning talk ⚡️</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -342,12 +361,40 @@ Dr.&nbsp;Jens Brinkmann
     </div>
 </div>
 
-  <p class="date">Wednesday, September 20, 2023</p>
+  <p class="date">Tuesday, October 17, 2023</p>
 </section>
-<section>
+<section id="to-do" class="title-slide slide level1 center">
+<h1>to do</h1>
+<ul>
+<li>think about more visualisations</li>
+<li>AI generated!</li>
+<li>some more video snippets?</li>
+<li>put a UoA banner and title on each slide (that was the plan of my GitHub Fork)</li>
+</ul>
+</section>
+
+<section id="intro" class="title-slide slide level1 center">
+<h1>Intro</h1>
+<ul>
+<li>ML/AI are without a doubt a big topic</li>
+<li>Empowering reserachers to use relevant approaches in their work is very rewarding, but also challenging</li>
+<li><a href="https://carpentries.org/">The Carpentries</a> offer a proven teaching style also supporting participants with limited IT experience
+<ul>
+<li><div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="TheCarpentries.svg"></p>
+<figcaption>The Carpentries</figcaption>
+</figure>
+</div></li>
+<li>core aspects are live-coding, a positive attitude not anticipating prerequirments and participant invovlement</li>
+</ul></li>
+<li>The <a href="http://eresearch.auckland.ac.nz/">CeR (Centre for eResearch)</a> at the University of Auckland acquired funding to further develop and run a series of workshops, referred to as <em>ML-Carp</em></li>
+<li><a href="https://colab.research.google.com/">Goolge Colab</a> <img data-src="./Google_Colaboratory_SVG_Logo.svg" alt="Colab"> was used over local Python installs to focus attention on content</li>
+</ul>
+</section>
+
 <section id="lesson-overview" class="title-slide slide level1 center">
 <h1>Lesson Overview</h1>
-<p>We had two big topics: ML and DL</p>
 <table>
 <thead>
 <tr class="header">
@@ -360,7 +407,7 @@ Dr.&nbsp;Jens Brinkmann
 </thead>
 <tbody>
 <tr class="odd">
-<td><del>Programming with Python</del></td>
+<td>Programming with Python</td>
 <td><a href="https://swcarpentry.github.io/python-novice-inflammation/">Released</a></td>
 <td>Mon, Tue</td>
 <td>-</td>
@@ -370,104 +417,293 @@ Dr.&nbsp;Jens Brinkmann
 <td>Introduction to Machine Learning with Scikit Learn</td>
 <td><a href="https://mike-ivs.github.io/machine-learning-novice-sklearn/02-regression/index.html">Alpha</a></td>
 <td>Wed, Thu</td>
-<td><strong>Mon, Tue</strong> <em>(+optimisation)</em></td>
+<td>Mon, Tue <em>(+optimisation)</em></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Introduction to Deep Learning</td>
 <td><a href="https://carpentries-incubator.github.io/deep-learning-intro/aio.html">Beta</a></td>
 <td>Fri</td>
-<td><strong>Wed, Thu</strong> <em>(+optimisation)</em></td>
+<td>Wed, Thu <em>(+optimisation)</em></td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <p><em>Each session took place on an afternoon for 4-5.</em></p>
 </section>
-<section id="introduction-to-machine-learning-with-scikit-learn" class="slide level2">
-<h2>Introduction to Machine Learning with Scikit Learn</h2>
+
+<section>
+<section id="run-1-from-day-x-to-y" class="title-slide slide level1 center">
+<h1>Run #1 (from day x to y)</h1>
 <ul>
-<li>Nelis introduced us to the topic</li>
-<li>Mike built on that</li>
-<li>Regression and Classification</li>
+<li>Mainly statistics here (40 people, pie chart what faculty, …)</li>
+<li>takeaway message: various, most without background</li>
+<li>some quotes
+<ul>
+<li>very good</li>
+<li>limited breaks</li>
+<li>…</li>
+</ul></li>
+<li>observation: Even at the very end of the sessions, questions, participantion and interest didn’t cease</li>
 </ul>
-<div class="r-stack">
-<p><img data-src="regression_example.png" class="fragment fade-in-then-out" style="width:80.0%"></p>
-<p><img data-src="e3_dt_space_2.png" class="fragment fade-in-then-out" style="width:100.0%"></p>
+</section>
+<section id="metrics" class="slide level2">
+<h2>Metrics</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<!-- {{< embed ./Plots.ipynb#two >}} -->
+<div class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+
+<div>                            <div id="e1674ad4-44d4-4614-911d-1514d4fee1bb" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("e1674ad4-44d4-4614-911d-1514d4fee1bb")) {                    Plotly.newPlot(                        "e1674ad4-44d4-4614-911d-1514d4fee1bb",                        [{"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"hovertemplate":"Option=%{label}<br>Count=%{value}<extra></extra>","labels":["Biomedical and clinical sciences","Engineering","Built environment and design","Economics","Chemical sciences","Mathematical sciences","Biological sciences","Education"],"legendgroup":"","name":"","showlegend":true,"values":[6,4,1,1,1,1,1,1],"type":"pie"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"legend":{"tracegroupgap":0},"margin":{"t":60},"piecolorway":["#00467F","#009AC7","#8D9091","#A71930","#7D0063","#D2492A","#55A51C","#4F2D7F","#005B82","#00877C","#0039A6","#BA4482","#006990"],"font":{"family":"Verdana","size":18},"title":{"text":"Pariticpants' Background"}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('e1674ad4-44d4-4614-911d-1514d4fee1bb');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<!-- Pariticpants' Operating Systems -->
+<div class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+
+<div>                            <div id="b2ee0bc3-3c7f-43d5-9a00-746a407b8018" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("b2ee0bc3-3c7f-43d5-9a00-746a407b8018")) {                    Plotly.newPlot(                        "b2ee0bc3-3c7f-43d5-9a00-746a407b8018",                        [{"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"hovertemplate":"Option=%{label}<br>Count=%{value}<extra></extra>","labels":["Windows","macOS","Linux"],"legendgroup":"","name":"","showlegend":true,"values":[12,3,1],"type":"pie"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"legend":{"tracegroupgap":0},"margin":{"t":60},"piecolorway":["#00467F","#009AC7","#8D9091","#A71930","#7D0063","#D2492A","#55A51C","#4F2D7F","#005B82","#00877C","#0039A6","#BA4482","#006990"],"font":{"family":"Verdana","size":18},"title":{"text":"Pariticpants' Operating System"}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('b2ee0bc3-3c7f-43d5-9a00-746a407b8018');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div>
+</div>
+</div>
+</div>
 </div>
 </section>
-<section id="introduction-to-deep-learning" class="slide level2">
-<h2>Introduction to Deep Learning</h2>
+<section id="plot-2" class="slide level2">
+<h2>Plot 2</h2>
+<div class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+
+<div>                            <div id="87e88b61-7020-48b3-a4fc-75cb6d734112" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("87e88b61-7020-48b3-a4fc-75cb6d734112")) {                    Plotly.newPlot(                        "87e88b61-7020-48b3-a4fc-75cb6d734112",                        [{"boxpoints":"all","jitter":0.3,"line":{"color":"#00467F"},"marker":{"color":"#00467F"},"name":"Please rate your level of agreement with the following statements (0 = complete disagreement, 100 = complete agreement). - I felt comfortable learning in this workshop","pointpos":-1.8,"y":[100.0,100.0,100.0,85.0,50.0,100.0,100.0,95.0,60.0,60.0,81.0,100.0,null,100.0,90.0,80.0],"type":"box"},{"boxpoints":"all","jitter":0.3,"line":{"color":"#009AC7"},"marker":{"color":"#009AC7"},"name":"Please rate your level of agreement with the following statements (0 = complete disagreement, 100 = complete agreement). - The set up instructions were easy to follow","pointpos":-1.8,"y":[100.0,100.0,100.0,85.0,70.0,98.0,82.0,100.0,67.0,40.0,100.0,95.0,null,100.0,100.0,85.0],"type":"box"},{"boxpoints":"all","jitter":0.3,"line":{"color":"#8D9091"},"marker":{"color":"#8D9091"},"name":"Please rate your level of agreement with the following statements (0 = complete disagreement, 100 = complete agreement). - The workshop description and level were accurate","pointpos":-1.8,"y":[100.0,100.0,100.0,100.0,60.0,97.0,82.0,100.0,67.0,60.0,71.0,95.0,null,81.0,80.0,90.0],"type":"box"},{"boxpoints":"all","jitter":0.3,"line":{"color":"#A71930"},"marker":{"color":"#A71930"},"name":"Please rate your level of agreement with the following statements (0 = complete disagreement, 100 = complete agreement). - The workshop taught me what I wanted to learn","pointpos":-1.8,"y":[50.0,82.0,80.0,100.0,60.0,94.0,80.0,80.0,81.0,70.0,84.0,90.0,null,100.0,80.0,90.0],"type":"box"},{"boxpoints":"all","jitter":0.3,"line":{"color":"#7D0063"},"marker":{"color":"#7D0063"},"name":"Please rate your level of agreement with the following statements (0 = complete disagreement, 100 = complete agreement). - I can immediately apply what I learned","pointpos":-1.8,"y":[100.0,68.0,50.0,80.0,20.0,98.0,71.0,60.0,44.0,60.0,100.0,85.0,null,50.0,60.0,85.0],"type":"box"},{"boxpoints":"all","jitter":0.3,"line":{"color":"#D2492A"},"marker":{"color":"#D2492A"},"name":"Please rate your level of agreement with the following statements (0 = complete disagreement, 100 = complete agreement). - I feel confident enough to continue learning about machine learning on my own","pointpos":-1.8,"y":[80.0,84.0,60.0,70.0,70.0,100.0,72.0,80.0,43.0,50.0,100.0,95.0,null,50.0,70.0,80.0],"type":"box"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"yaxis":{"range":[0,100]},"annotations":[{"arrowhead":7,"ax":0,"ay":-20,"font":{"color":"black","size":14},"showarrow":true,"text":"Median: 95.00","x":0,"y":95.0},{"arrowhead":7,"ax":0,"ay":-20,"font":{"color":"black","size":14},"showarrow":true,"text":"Median: 98.00","x":1,"y":98.0},{"arrowhead":7,"ax":0,"ay":-20,"font":{"color":"black","size":14},"showarrow":true,"text":"Median: 90.00","x":2,"y":90.0},{"arrowhead":7,"ax":0,"ay":-20,"font":{"color":"black","size":14},"showarrow":true,"text":"Median: 81.00","x":3,"y":81.0},{"arrowhead":7,"ax":0,"ay":-20,"font":{"color":"black","size":14},"showarrow":true,"text":"Median: 68.00","x":4,"y":68.0},{"arrowhead":7,"ax":0,"ay":-20,"font":{"color":"black","size":14},"showarrow":true,"text":"Median: 72.00","x":5,"y":72.0},{"ax":0,"ay":20,"font":{"color":"red","size":14},"text":"Overall avg: 80.69","x":6,"y":80.68888888888888}],"font":{"family":"Verdana","size":18},"title":{"text":"Agreement with statements: 0 = complete disagreement, 100 = complete agreement"},"xaxis":{"showticklabels":false,"showline":false,"zeroline":false},"legend":{"font":{"size":18},"x":0.5,"y":-0.2,"xanchor":"center","yanchor":"top"},"shapes":[{"line":{"color":"red","width":2},"type":"line","x0":-1,"x1":6,"y0":80.68888888888888,"y1":80.68888888888888}]},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('87e88b61-7020-48b3-a4fc-75cb6d734112');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div>
+</div>
+</div>
+</section></section>
+<section id="reflection-on-run-1-and-adaption" class="title-slide slide level1 center">
+<h1>Reflection on Run #1 and adaption</h1>
 <ul>
-<li>Nidhi switched from generic ML to Deep Learning (DL)</li>
-<li>Some aspects (there are more:)
+<li>The learning curve appeared too steep. From no coding to refined DL approaches in a few days appeared too challenging
 <ul>
-<li>ML: stoachstic; similar if not the same result</li>
-<li>DL: non-convex and complex</li>
-<li>DL: only estimated</li>
-<li>DL: uses neural networks</li>
-<li>DL: tends to use way more resources (CPU/GPU)</li>
-<li>ML: Can still solve a lot of real-world issues using limilted resources</li>
+<li>(some) Python knowledge was made a prerequisite for the Run #2. That hasn’t lead to a decline in registrations</li>
+<li>Two (half) days of Python being removed from this run’s curriculum freed up time to allow for more breaks, an even slower pace and answering more specific questions</li>
+</ul></li>
+<li>End of the run shouldn’t imply ceasing communication with (most) participants
+<ul>
+<li>while some researchs continue to stay in touch with CeR after Run #1, to keep up the momentum of more participants, after the end of the workshop should be less of a cut and more ‘faded out’
+<ul>
+<li>A curated set of links for self-study was deemed too generic with an anticipated low continued interst in fully self-motivated<br>
+</li>
+<li>Slack sub channel with targeted support</li>
+<li>Kaggle?</li>
+<li>VSC and local Python/GPU/Nectar/…</li>
+<li><img data-src="ComparisonRevRun1And2.jpg" alt="Comparison"> TODO: make this appear and disappear</li>
+</ul></li>
 </ul></li>
 </ul>
 </section>
-<section id="how-we-deviated-from-the-carpentries-and-why" class="slide level2">
-<h2>How we deviated from ‘The Carpentries’ and why</h2>
+
+<section>
+<section id="what-participants-of-run-1-said" class="title-slide slide level1 center">
+<h1>What participants of Run #1 said</h1>
+
+</section>
+<section id="what-1-thing-did-you-like-and-would-want-to-see-in-future-workshops" class="slide level2">
+<h2>What 1 thing did you like and would want to see in future workshops?</h2>
 <ul>
-<li>Google Colab vs.&nbsp;<del>locally installed Jupyter Notebooks</del> or <del>Plain Vanilla Python</del>
+<li><em>“apply these ML techniques on the different field”</em>
 <ul>
-<li>Do all use Colab ‘in the real world’ all the time? No!
-<ul>
-<li><a href="https://code.visualstudio.com/">VSCode</a></li>
-<li>Python locally installed
-<ul>
-<li>Virtual Environment</li>
-<li><code>pip install</code></li>
+<li>hard to achieve, focus on underlying theory</li>
 </ul></li>
-<li>using GPU/<a href="https://research-hub.auckland.ac.nz/research-software-and-computing/advanced-compute/nectar-research-cloud">Nectar</a>/…</li>
+<li><em>“slower pace”</em>
+<ul>
+<li>removed Python from curriculum</li>
+</ul></li>
+<li><em>“some research paper example?”</em>
+<ul>
+<li>hard</li>
+</ul></li>
+<li><em>“add some quick group exercise session or quiz”</em>
+<ul>
+<li>more links/examples after the run</li>
+</ul></li>
+<li><em>“many people were online to help the students”</em>
+<ul>
+<li>continued with many helpers</li>
+</ul></li>
+</ul>
+</section>
+<section id="what-1-thing-you-do-think-we-could-do-better" class="slide level2">
+<h2>What 1 thing you do think we could do better?</h2>
+<ul>
+<li><p>too fast</p></li>
+<li><p>separate Python</p></li>
+<li><p>adhering to break schedule</p>
+<h1 id="comparing-run-1-and-2-what-metrics-and-people-say">Comparing Run #1 and #2: What metrics and people say</h1>
+<ul>
+<li>what the numbers say
+<ul>
+<li>more people signed up (word of mouth/positive experince being shared?)</li>
+<li>more of this and that</li>
+</ul></li>
+<li>what the pepole say
+<ul>
+<li>instrcutors/organisers (for the sake of bervity no full quotes)
+<ul>
+<li>better balance of topics (only ML, DL vs.&nbsp;having to cope with Python)</li>
+</ul></li>
+<li>participants
+<ul>
+<li>…</li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
 </section></section>
-<section id="recommended-next-steps" class="title-slide slide level1 center">
-<h1>Recommended next steps</h1>
+<section id="outlook" class="title-slide slide level1 center">
+<h1>Outlook</h1>
 <ul>
-<li>This was a lot of content!</li>
-<li>Try to integrate it/go through the examples in the near future
-<ul>
-<li>schedule it!</li>
-<li>not: <em>I will do that one day</em>; that day never comes!</li>
-</ul></li>
-<li>Please fill out our <a href="https://auckland.au1.qualtrics.com/jfe/form/SV_7QKm5JodbHrRaWW">Survey</a>, now!</li>
-<li>join <a href="https://research-hub.auckland.ac.nz/digital-research-skills/hacky-hour">Hacky Hour</a></li>
+<li>while specific funding (for lesson preparation and delivery) has ended, the importance of the topic continues to increase</li>
+<li>more sessions are planned</li>
+<li>current Slack seems promising</li>
+<li>the decision to teach Python at SW Carp was deemed good</li>
 </ul>
 </section>
 
-<section id="kaggle" class="title-slide slide level1 center">
-<h1>Kaggle</h1>
-<p><a href="https://www.kaggle.com/">Kaggle</a> is an AI community aimed at getting a better understanding/practice. There are competitions that we can recommend:</p>
-<ul>
-<li>Regression:
-<ul>
-<li><a href="https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data">House Prices</a> <span class="emoji" data-emoji="house">🏠</span></li>
-</ul></li>
-<li>Classification:
-<ul>
-<li><a href="https://www.kaggle.com/competitions/spaceship-titanic/data">Titanic</a> <span class="emoji" data-emoji="ship">🚢</span></li>
-<li><a href="https://www.kaggle.com/competitions/spaceship-titanic/data">Spaceship Titanic</a> 🛰️ <span class="emoji" data-emoji="ship">🚢</span></li>
-<li><a href="https://www.kaggle.com/competitions/digit-recognizer/data">mnist digit recognition</a> <span class="emoji" data-emoji="pen">🖊️</span> (probably quite a bit harder just because of the data input/processing)</li>
-</ul></li>
-</ul>
-<p>(Alternative to Kaggle: <a href="https://scikit-learn.org/stable/datasets/toy_dataset.html">Scikit Toy Datasets</a>)</p>
-</section>
+<section id="test-2" class="title-slide slide level1 center">
+<h1>test 2</h1>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.26.0/plotly.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/21.0.0/tween.umd.js"></script>
+<div id="plot">
 
-<section id="good-luck" class="title-slide slide level1 center">
-<h1>Good luck</h1>
-<ul>
-<li>Stay in touch with us on your ML/DL/AI journey <a href="https://eresearch.auckland.ac.nz/">CeR</a></li>
-<li>the time is now!</li>
-<li>While we can’t predict what is going to happen in the AI space, we can tell you from experience that we get more researchers making ML-requests almmost daily</li>
-</ul>
+</div>
+<script>
+  var data = [{
+    values: [19, 26, 55],
+    labels: ['Residential', 'Non-Residential', 'Utility'],
+    pull: [0, 0, 0],
+    type: 'pie',
+    automargin: true
+  }];
+
+  var layout = {
+    height: "100%",
+    width: "100%"
+  };
+
+  var plot = document.getElementById('plot')
+  Plotly.newPlot(plot, data, layout);
+
+  window.tween = null;
+
+  function tween_function(d, from=0, to=0.5) {
+    var tweenValue = {pull: from}
+    window.tween = new TWEEN.Tween(tweenValue, false)
+    .to({pull: to}, 300)
+    .easing(TWEEN.Easing.Quadratic.InOut)
+    .onUpdate(() => {
+      var pull = [0,0,0]
+      pull[d.pointNumber] = tweenValue.pull
+      d.data.pull = pull
+      Plotly.restyle(plot, {
+        marker: {
+          pull: pull
+        }
+      });
+    }).start()
+  }
+
+  function animate(time) {
+    if (window.tween) {
+      window.tween.update(time)
+    }
+    requestAnimationFrame(animate)
+  }
+  animate()
+
+  plot.on('plotly_hover', function(data){
+    //if (tween && tween.isPlaying()) return
+    var d = data.points[0]
+    tween_function(d)
+  });
+
+  plot.on('plotly_unhover', function(data) {
+    if (tween && tween.isPlaying()) return
+    var d = data.points[0]
+    tween_function(d, 0.5, 0)
+  })
+</script>
+
 <div class="footer footer-default">
 
 </div>
@@ -479,7 +715,7 @@ Dr.&nbsp;Jens Brinkmann
 <p> </p>
 </div>
 <div class="header-text" data-hide-from-titleslide="true">
-<p>ML Carp Recap and Outlook</p>
+<p>Developing a Carpentries-style Machine Learning workshop</p>
 </div>
 <div class="sb-title">
 <p> </p>
@@ -490,19 +726,19 @@ Dr.&nbsp;Jens Brinkmann
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="Lightning Talk_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="Lightning Talk_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="Lightning Talk_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="Lightning Talk_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="Lightning Talk_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="Lightning Talk_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="Lightning Talk_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="Lightning Talk_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="Lightning Talk_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="Lightning Talk_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
