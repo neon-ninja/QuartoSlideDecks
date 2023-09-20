@@ -21,34 +21,6 @@
     "text": "How we deviated from ‘The Carpentries’ and why\n\nGoogle Colab vs. locally installed Jupyter Notebooks or Plain Vanilla Python\n\nDo all use Colab ‘in the real world’ all the time? No!\n\nVSCode\nPython locally installed\n\nVirtual Environment\npip install\n\nusing GPU/Nectar/…"
   },
   {
-    "objectID": "Lightning Talk.html#metrics",
-    "href": "Lightning Talk.html#metrics",
-    "title": "Developing a Carpentries-style Machine Learning workshop",
-    "section": "Metrics",
-    "text": "Metrics"
-  },
-  {
-    "objectID": "Lightning Talk.html#plot-2",
-    "href": "Lightning Talk.html#plot-2",
-    "title": "Developing a Carpentries-style Machine Learning workshop",
-    "section": "Plot 2",
-    "text": "Plot 2"
-  },
-  {
-    "objectID": "Lightning Talk.html#what-1-thing-did-you-like-and-would-want-to-see-in-future-workshops",
-    "href": "Lightning Talk.html#what-1-thing-did-you-like-and-would-want-to-see-in-future-workshops",
-    "title": "Developing a Carpentries-style Machine Learning workshop",
-    "section": "What 1 thing did you like and would want to see in future workshops?",
-    "text": "What 1 thing did you like and would want to see in future workshops?\n\n“apply these ML techniques on the different field”\n\nhard to achieve, focus on underlying theory\n\n“slower pace”\n\nremoved Python from curriculum\n\n“some research paper example?”\n\nhard\n\n“add some quick group exercise session or quiz”\n\nmore links/examples after the run\n\n“many people were online to help the students”\n\ncontinued with many helpers"
-  },
-  {
-    "objectID": "Lightning Talk.html#what-1-thing-you-do-think-we-could-do-better",
-    "href": "Lightning Talk.html#what-1-thing-you-do-think-we-could-do-better",
-    "title": "Developing a Carpentries-style Machine Learning workshop",
-    "section": "What 1 thing you do think we could do better?",
-    "text": "What 1 thing you do think we could do better?\n\ntoo fast\nseparate Python\nadhering to break schedule\nComparing Run #1 and #2: What metrics and people say\n\nwhat the numbers say\n\nmore people signed up (word of mouth/positive experince being shared?)\nmore of this and that\n\nwhat the pepole say\n\ninstrcutors/organisers (for the sake of bervity no full quotes)\n\nbetter balance of topics (only ML, DL vs. having to cope with Python)\n\nparticipants\n\n…"
-  },
-  {
     "objectID": "ResBazPlanning.html#r",
     "href": "ResBazPlanning.html#r",
     "title": "ResBaz 2023 - Scheduling Assistance",
@@ -222,5 +194,33 @@
     "title": "LaTeX 101 - Don’t be scared",
     "section": "Tables",
     "text": "Tables\n\n\n\nA simple table in \\(\\LaTeX\\) syntax:\n\n\\begin{table}[]\n\\caption{My Example Table}\n\\label{tab:my-table}\n\\begin{tabular}{|l|l|l|l|l|}\n\\hline\ncountry     & 1999   & 2000   &  &  \\\\ \\hline\nAfghanistan & 745    & 2666   &  &  \\\\ \\hline\nBrazil      & 37737  & 80488  &  &  \\\\ \\hline\nChina       & 212258 & 213766 &  &  \\\\ \\hline\n\\end{tabular}\n\\end{table}\n\n\nAlternatively using markdown syntax:\n\n| country     | 1999   | 2000   |   |   |\n|-------------|--------|--------|---|---|\n| Afghanistan | 745    | 2666   |   |   |\n| Brazil      | 37737  | 80488  |   |   |\n| China       | 212258 | 213766 |   |   |\n\n\n\nTo be honest:\n\nBoth are a pain to format by hand\nYou shouldn’t work with your data in these. These are for publishing only.\nSome see spreadsheet software (MSExcel, Google Sheets, etc.) just suited for data entry, Python, R, OpenRefine, etc. are better alternatives whose learning curve isn’t as steep as you might expect and relevant sessions are also provided at this year’s ResBaz (see pointers)"
+  },
+  {
+    "objectID": "Lightning Talk.html#metrics",
+    "href": "Lightning Talk.html#metrics",
+    "title": "Developing a Carpentries-style Machine Learning workshop",
+    "section": "Metrics",
+    "text": "Metrics"
+  },
+  {
+    "objectID": "Lightning Talk.html#plot-2",
+    "href": "Lightning Talk.html#plot-2",
+    "title": "Developing a Carpentries-style Machine Learning workshop",
+    "section": "Plot 2",
+    "text": "Plot 2"
+  },
+  {
+    "objectID": "Lightning Talk.html#what-1-thing-did-you-like-and-would-want-to-see-in-future-workshops",
+    "href": "Lightning Talk.html#what-1-thing-did-you-like-and-would-want-to-see-in-future-workshops",
+    "title": "Developing a Carpentries-style Machine Learning workshop",
+    "section": "What 1 thing did you like and would want to see in future workshops?",
+    "text": "What 1 thing did you like and would want to see in future workshops?\n\n“apply these ML techniques on the different field”\n\nhard to achieve, focus on underlying theory\n\n“slower pace”\n\nremoved Python from curriculum\n\n“some research paper example?”\n\nhard\n\n“add some quick group exercise session or quiz”\n\nmore links/examples after the run\n\n“many people were online to help the students”\n\ncontinued with many helpers"
+  },
+  {
+    "objectID": "Lightning Talk.html#what-1-thing-you-do-think-we-could-do-better",
+    "href": "Lightning Talk.html#what-1-thing-you-do-think-we-could-do-better",
+    "title": "Developing a Carpentries-style Machine Learning workshop",
+    "section": "What 1 thing you do think we could do better?",
+    "text": "What 1 thing you do think we could do better?\n\ntoo fast\nseparate Python\nadhering to break schedule\nComparing Run #1 and #2: What metrics and people say\n\nwhat the numbers say\n\nmore people signed up (word of mouth/positive experince being shared?)\nmore of this and that\n\nwhat the pepole say\n\ninstrcutors/organisers (for the sake of bervity no full quotes)\n\nbetter balance of topics (only ML, DL vs. having to cope with Python)\n\nparticipants\n\n…"
   }
 ]
