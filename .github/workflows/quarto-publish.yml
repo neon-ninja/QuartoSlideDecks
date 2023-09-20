@@ -27,10 +27,11 @@ jobs:
 
       # From https://github.com/actions/setup-python
       - name: Setup Python
-        uses: actions/setup-python@v3
-
-      - name: Install Jupyter
-        run: python3 -m pip install jupyter
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+          cache: 'pip'
+      - run: pip install -r requirements.txt
 
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
